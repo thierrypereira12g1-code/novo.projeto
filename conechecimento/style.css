@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+}
+
+/* =========================
+   CONTAINER PRINCIPAL
+========================= */
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* =========================
+   LADO ESQUERDO
+========================= */
+.container-left {
+  width: 60%;
+  padding-left: 136px;
+  padding-top: 20vh;
+}
+
+/* =========================
+   LADO DIREITO
+========================= */
+.container-right {
+  width: 40%;
+  min-height: 100vh;
+  background-color: rgba(93, 93, 125, 0.16);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* =========================
+   MENU (TOPO, LADO A LADO)
+========================= */
+.menu-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 600px;
+  margin: 0 auto 0 60px; /* ajuste fino visual */
+
+  padding: 30px 0;
+}
+
+.menu-list .menu-item {
+  list-style: none;
+  margin: 0 20px;
+}
+
+.menu-list .menu-item a {
+  font-size: 20px;
+  line-height: 41px;
+  color: #505070;
+  text-decoration: none;
+}
+
+.menu-item:nth-child(2) {
+  opacity: 0.4;
+}
+
+/* =========================
+   IMAGEM
+========================= */
+.app-image {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 100px auto 0;
+}
+
+/* =========================
+   TEXTO
+========================= */
+h1 {
+  font-size: 70px;
+  line-height: 80px;
+  color: #505070;
+  max-width: 500px;
+}
+
+p {
+  font-size: 28px;
+  line-height: 48px;
+  opacity: 0.6;
+  margin: 15px 0;
+  max-width: 540px;
+}
+
+/* =========================
+   BOTÃO (COM HOVER)
+========================= */
+button {
+  width: 269px;
+  height: 62px;
+  background: #9499CA;
+  box-shadow: 8px 10px 24px rgba(148, 153, 234, 0.0979959);
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:active {
+  opacity: 0.5;
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 900px) {
+  .container-left {
+    width: 55%;
+    padding-left: 60px;
+  }
+
+  .container-right {
+    width: 45%;
+  }
+
+  h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  p {
+    font-size: 22px;
+    line-height: 34px;
+  }
+
+  .app-image {
+    max-width: 320px;
+  }
+
+  .menu-list {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* =========================
+   CELULAR
+========================= */
+@media (max-width: 600px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-left,
+  .container-right {
+    width: 100%;
+    position: static;
+  }
+
+  .menu-list {
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  .container-left {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .container-right {
+    min-height: auto;
+    padding-bottom: 30px;
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
